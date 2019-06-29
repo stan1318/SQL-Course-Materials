@@ -1,5 +1,5 @@
 USE store;
-SELECT o.order_date,o.order_id,c.first_name,s.name,os.name FROM orders o 
+SELECT o.order_date,o.order_id,c.first_name,s.name AS shipper,os.name AS status FROM orders o 
 JOIN  customers c 
 ON o.customer_id=c.customer_id
 LEFT JOIN shippers s 
